@@ -522,6 +522,8 @@ h1, h2, h3, h4, h5, h6 {
   background: #cc1616;
   border-color: #cc1616;
   padding: 70px 20px 90px 20px;
+  color:#fff;
+  cursor: pointer;
 }
 
 .services .icon-box:hover .icon {
