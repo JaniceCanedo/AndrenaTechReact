@@ -1,39 +1,27 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+class ServiceContent extends Component {
 
 
-class ServiceModal extends Component {
-    render(){
 
-        const [show, setShow] = useState(false);
+    render() {
 
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
+      const element = <FontAwesomeIcon icon={this.props.img} />
+        return (
 
-        return(
-            <>
-            <Button variant="primary" onClick={handleShow}>
-            Launch demo modal
-          </Button>
-    
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleClose}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </>
+          <div class="col-lg-4 col-md-6 align-items-stretch" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble">
+                {element}
+                </i>
+                </div>
+        <h4><a href="">{this.props.serviceName}</a></h4>
+                <p>{this.props.serviceDesc}</p>
+              </div>
+            </div>
         );
     }
-
-
 }
 
-export default ServiceModal
+export default ServiceContent
